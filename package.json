@@ -5,10 +5,11 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "hook:commit-msg": "commitlint -e",
+    "hook:pre-commit": "lint-staged",
     "ios": "react-native run-ios",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "postinstall": "husky install",
-    "pre-commit": "lint-staged",
     "start": "react-native start",
     "test": "jest"
   },
@@ -33,6 +34,9 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
+    "@commitlint/cli": "12.1.1",
+    "@commitlint/config-conventional": "12.1.1",
+    "@commitlint/prompt-cli": "12.1.1",
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/jest": "^26.0.20",
     "@types/react-native": "^0.64.0",
