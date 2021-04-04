@@ -2,14 +2,13 @@ import 'react-native-gesture-handler';
 import React, {useState, useEffect} from 'react';
 import {View} from 'react-native';
 
-import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
+import {ApolloClient, ApolloProvider} from '@apollo/client';
 
 import AsyncStorage from '@react-native-community/async-storage';
 import {persistCache} from 'apollo3-cache-persist';
 import {ActivityIndicator} from 'react-native-paper';
 import {App} from './app';
-
-const cache = new InMemoryCache();
+import {cache} from './store';
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000/graphql',
