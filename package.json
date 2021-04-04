@@ -13,17 +13,6 @@
     "start": "react-native start",
     "test": "jest"
   },
-  "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
-    "preset": "react-native"
-  },
   "resolutions": {
     "@types/react": "^17"
   },
@@ -46,6 +35,7 @@
     "@commitlint/config-conventional": "12.1.1",
     "@commitlint/prompt-cli": "12.1.1",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@testing-library/react-native": "7.2.0",
     "@types/jest": "^26.0.20",
     "@types/react-native": "^0.64.0",
     "@types/react-test-renderer": "^16.9.2",
