@@ -1,5 +1,6 @@
 {
-  "name": "financialDemoMobileApp",
+  "name": "financial-demo-mobile-app",
+  "description": "App to apply knowledge about react-native, graphql, apollo-client and some other UX plugins",
   "version": "0.0.1",
   "private": true,
   "scripts": {

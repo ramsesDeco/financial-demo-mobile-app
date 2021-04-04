@@ -1,0 +1,26 @@
+{
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "files.watcherExclude": {
+    "build": true,
+    "coverage": true,
+    "dist": true,
+    "docs": true
+  },
+  "search.exclude": {
+    "node_modules": true,
+    "build": true,
+    "coverage": true,
+    "dist": true,
+    "docs": true,
+    ".git": true,
+    ".tscache": true,
+    "bower_components": true,
+    "bin": true,
+    "lib": true
+  },
+  "editor.insertSpaces": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  },
+  "editor.formatOnSave": true
+}
