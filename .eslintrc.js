@@ -11,6 +11,7 @@ module.exports = {
     '@react-native-community',
   ],
   rules: {
+    'react/jsx-props-no-spreading': 0,
     'react-native/no-inline-styles': 0,
     'import/prefer-default-export': 0,
     'import/no-unresolved': 'off',
