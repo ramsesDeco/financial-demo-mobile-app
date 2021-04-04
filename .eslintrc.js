@@ -10,9 +10,10 @@ module.exports = {
     'eslint-config-prettier',
     '@react-native-community',
   ],
-  parser: 'babel-eslint',
   rules: {
+    'import/prefer-default-export': 0,
     'import/no-unresolved': 'off',
+    'import/no-extraneous-dependencies': [0],
     'import/extensions': [
       0,
       {
