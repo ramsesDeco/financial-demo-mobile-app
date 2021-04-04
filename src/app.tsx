@@ -1,22 +1,17 @@
 import React from 'react';
 import {StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
+import {Provider as PaperProvider} from 'react-native-paper';
 
 import {RootNavigator} from './router/root-navigator';
 
-const client = new ApolloClient({
-  uri: 'localhost:4000/graphql',
-  cache: new InMemoryCache(),
-});
-
 export const App = () => {
   return (
-    <ApolloProvider client={client}>
+    <PaperProvider>
       <NavigationContainer>
         <StatusBar />
         <RootNavigator />
       </NavigationContainer>
-    </ApolloProvider>
+    </PaperProvider>
   );
 };
