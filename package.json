@@ -9,6 +9,7 @@
     "hook:pre-commit": "lint-staged",
     "ios": "react-native run-ios",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "mock-server": "yarn --cwd server run-servers",
     "postinstall": "husky install",
     "start": "react-native start",
     "test": "jest"
@@ -17,10 +18,14 @@
     "@types/react": "^17"
   },
   "dependencies": {
+    "@apollo/client": "3.3.13",
+    "@react-native-community/async-storage": "1.12.1",
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/drawer": "5.12.5",
     "@react-navigation/native": "5.9.4",
     "@react-navigation/stack": "5.14.4",
+    "apollo3-cache-persist": "0.9.1",
+    "graphql": "15.5.0",
     "react": "17.0.1",
     "react-native": "0.64.0",
     "react-native-gesture-handler": "1.10.3",

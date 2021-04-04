@@ -1,0 +1,24 @@
+{
+  "name": "ram-deco-graphql-server",
+  "version": "1.0.0",
+  "description": "custom mock of graphql server",
+  "license": "MIT",
+  "author": "Ramses De La Peña",
+  "main": "index.js",
+  "scripts": {
+    "run-servers": "run-p server:*",
+    "server:api": "json-server --watch db.json",
+    "server:graphql": "nodemon -r esm server.js"
+  },
+  "dependencies": {
+    "axios": "0.21.1",
+    "express": "4.17.1",
+    "express-graphql": "0.12.0"
+  },
+  "devDependencies": {
+    "esm": "3.2.25",
+    "json-server": "0.16.3",
+    "nodemon": "2.0.7",
+    "npm-run-all": "4.1.5"
+  }
+}
