@@ -19,7 +19,7 @@ export const Header = ({scene, previous, navigation}: StackHeaderProps) => {
       : options.title !== undefined
       ? options.title
       : !previous
-      ? `Hi ${userInfo.name}`
+      ? `Hola ${userInfo.name}`
       : scene.route.name;
 
   return (
