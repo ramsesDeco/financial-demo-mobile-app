@@ -7,8 +7,8 @@ const Drawer = createDrawerNavigator();
 
 export const RootNavigator = () => {
   return (
-    <Drawer.Navigator initialRouteName="Home" drawerContent={DrawerContent}>
-      <Drawer.Screen name="Home" component={MainNavigator} />
+    <Drawer.Navigator initialRouteName="Root" drawerContent={DrawerContent}>
+      <Drawer.Screen name="Root" component={MainNavigator} />
     </Drawer.Navigator>
   );
 };
