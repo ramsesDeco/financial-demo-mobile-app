@@ -1,5 +1,5 @@
 import {useQuery} from '@apollo/client';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {FlatList} from 'react-native';
 import {
   ActivityIndicator,
@@ -19,9 +19,14 @@ export const TransactionList = ({
 }: {
   ListHeaderComponent: React.ElementType;
 }) => {
+  const [refreshing, setRefreshing] = useState(false);
   const {data, loading, refetch} = useQuery(GET_USER_TRANSACTIONS, {
     variables: {id: USER_ID},
   });
+
+  useEffect(() => {
+    if (loading && refreshing) setRefreshing(false);
+  }, [loading, refreshing]);
 
   const transactions = data?.user?.transactions ?? [];
 
@@ -49,6 +54,7 @@ export const TransactionList = ({
 
   const renderLoadingFooter = () => {
     if (!loading) return null;
+    if (refreshing) return null;
 
     return <ActivityIndicator size="large" />;
   };
@@ -60,6 +66,13 @@ export const TransactionList = ({
       ListHeaderComponent={renderListHeader}
       ItemSeparatorComponent={Divider}
       renderItem={({item}) => <TransactionItem {...item} />}
+      refreshing={refreshing}
+      onRefresh={() => {
+        if (loading) return;
+        if (refreshing) return;
+        setRefreshing(true);
+        refetch();
+      }}
     />
   );
 };
