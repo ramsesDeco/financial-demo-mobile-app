@@ -8,6 +8,7 @@ import React from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {Avatar, Drawer, Title, IconButton} from 'react-native-paper';
 import Animated from 'react-native-reanimated';
+import {ToggleSwitchTheme} from './toggle-switch-theme';
 
 export const DrawerContent = (
   props: DrawerContentComponentProps<DrawerContentOptions>,
@@ -45,6 +46,9 @@ export const DrawerContent = (
               props.navigation.navigate('Home');
             }}
           />
+        </Drawer.Section>
+        <Drawer.Section title="Preferences">
+          <ToggleSwitchTheme />
         </Drawer.Section>
       </Animated.View>
     </DrawerContentScrollView>
