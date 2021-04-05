@@ -10,7 +10,10 @@
     "ios": "react-native run-ios",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "mock-server": "yarn --cwd server run-servers",
-    "postinstall": "husky install",
+    "postinstall": "yarn postinstall:husky && yarn postinstall:server && yarn postinstall:ios",
+    "postinstall:husky": "husky install",
+    "postinstall:ios": "cd ios && pod install && cd ..",
+    "postinstall:server": "cd server && yarn && cd ..",
     "start": "react-native start",
     "test": "jest"
   },
