@@ -40,7 +40,7 @@ export const DrawerContent = (
             icon={({color, size}) => (
               <IconButton icon="home-outline" color={color} size={size} />
             )}
-            label="Home"
+            label="Inicio"
             onPress={() => {
               props.navigation.navigate('Home');
             }}
