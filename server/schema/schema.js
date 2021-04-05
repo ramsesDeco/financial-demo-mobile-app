@@ -20,7 +20,9 @@ const UserType = new GraphQLObjectType({
       type: new GraphQLList(TransactionType),
       resolve(parentValue, args) {
         return axios
-          .get(`http://localhost:3000/users/${parentValue.id}/transactions`)
+          .get(
+            `http://localhost:3000/users/${parentValue.id}/transactions?_sort=created_at&_order=desc`,
+          )
           .then(res => res.data);
       },
     },
