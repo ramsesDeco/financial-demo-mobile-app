@@ -28,11 +28,11 @@ const styles = StyleSheet.create({
   },
   userBalanceTitle: {
     textTransform: 'uppercase',
-    marginBottom: 16,
   },
   userBalanceAmount: {
     color: '#bb63c8',
     fontWeight: 'bold',
-    fontSize: 32,
+    marginTop: 10,
+    fontSize: 28,
   },
 });
