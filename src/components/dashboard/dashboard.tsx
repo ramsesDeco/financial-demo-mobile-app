@@ -7,11 +7,16 @@ import {PaymentDetailCard} from './payment-detail-card';
 
 export const Dashboard = () => {
   return (
-    <View>
-      <UserBalanceCard />
-      <ShortcutFeatures />
-      <PaymentDetailCard />
-      <TransactionList />
-    </View>
+    <TransactionList
+      ListHeaderComponent={() => {
+        return (
+          <View>
+            <UserBalanceCard />
+            <ShortcutFeatures />
+            <PaymentDetailCard />
+          </View>
+        );
+      }}
+    />
   );
 };
