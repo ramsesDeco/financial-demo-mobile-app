@@ -1,6 +1,6 @@
 {
   "name": "financial-demo-mobile-app",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "App to apply knowledge about react-native, graphql, apollo-client and some other UX plugins",
   "private": true,
   "scripts": {
