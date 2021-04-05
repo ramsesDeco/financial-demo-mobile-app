@@ -1,4 +1,4 @@
-import {Appearance} from 'react-native';
+import {ColorSchemeName} from 'react-native';
 
 import {
   DarkTheme as NavigationDarkTheme,
@@ -29,8 +29,8 @@ const CombinedDarkTheme = {
   },
 };
 
-export const getTheme = () => {
-  const isDark = Appearance.getColorScheme() === 'dark';
+export const getTheme = (color: ColorSchemeName) => {
+  const isDark = color === 'dark';
   const currentTheme = isDark ? CombinedDarkTheme : CombinedDefaultTheme;
 
   return {

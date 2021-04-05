@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Switch, Text, TouchableRipple, useTheme} from 'react-native-paper';
+import {toggleThemeMode} from '../../../store';
 
 export const ToggleSwitchTheme = () => {
   const {dark} = useTheme();
@@ -8,7 +9,7 @@ export const ToggleSwitchTheme = () => {
   return (
     <TouchableRipple
       onPress={() => {
-        // TODO: add functionality
+        toggleThemeMode();
       }}>
       <View style={styles.preference}>
         <Text>Tema oscuro</Text>
