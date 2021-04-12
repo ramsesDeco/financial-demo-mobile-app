@@ -1,4 +1,4 @@
-# @mifiel-components
+# financial-demo-mobile-app
 
 ## [0.1.0](https://github.com/ramsesDeco/financial-demo-mobile-app/tree/v0.1.0) (2021-04-05)
 
